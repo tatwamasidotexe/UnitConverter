@@ -1,61 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_image"
     android:orientation="vertical"
-    android:gravity="center"
-    >
+    android:gravity="center">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit Converter"
+        android:layout_margin="10dp"
+        android:textSize="30dp"
+        android:fontFamily="monospace"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="by Group 7"
+        android:layout_marginBottom="20dp" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center">
-
-        <ImageButton
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:paddingVertical="10dp">
+        <androidx.cardview.widget.CardView
             android:id="@+id/timeBtn_id"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:backgroundTint="#00FFFFFF"
-            android:scaleType="fitCenter"
-            android:src="@drawable/chronometer" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardElevation="10dp"
+            >
 
-        <ImageButton
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200"
+                android:backgroundTint="#BB86FC"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/clock" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Time"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
             android:id="@+id/lengthBtn_id"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:backgroundTint="#00FFFFFF"
-            android:scaleType="fitCenter"
-            android:src="@drawable/length" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ruler_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Length"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center">
-
-        <ImageButton
+        android:layout_marginTop="20dp"
+        >
+        <androidx.cardview.widget.CardView
             android:id="@+id/tempBtn_id"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:backgroundTint="#00FFFFFF"
-            android:scaleType="fitCenter"
-            android:src="@drawable/thermometer" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardElevation="2dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+                <ImageView
 
-        <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/thermometer_half" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Temp"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
             android:id="@+id/massBtn_id"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:backgroundTint="#00FFFFFF"
-            android:scaleType="fitCenter"
-            android:src="@drawable/weighing_machine" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardElevation="2dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/balance_scale_right" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Weight"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="10dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/timeBtn_id"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:backgroundTint="#00FFFFFF"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/chronometer" >-->
+<!--        </Button>-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/lengthBtn_id"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:backgroundTint="#00FFFFFF"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/length" />-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="10dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/tempBtn_id"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:backgroundTint="#00FFFFFF"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/thermometer" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/massBtn_id"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:backgroundTint="#00FFFFFF"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/weighing_machine" />-->
+<!--    </LinearLayout>-->
 </LinearLayout>

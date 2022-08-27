@@ -1,6 +1,7 @@
 package com.example.unitconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    ImageButton timeBtn, lengthBtn, tempBtn, massBtn;
+    CardView timeBtn, lengthBtn, tempBtn, massBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
