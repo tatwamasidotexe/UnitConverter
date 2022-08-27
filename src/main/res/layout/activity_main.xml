@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,43 +6,55 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
     android:orientation="vertical"
+    android:gravity="center"
     >
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center">
+
         <ImageButton
             android:id="@+id/timeBtn_id"
-            android:layout_width="209dp"
-            android:layout_height="209dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:backgroundTint="#00FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/chronometer" />
 
         <ImageButton
-            android:layout_width="209dp"
-            android:layout_height="209dp"
+            android:id="@+id/lengthBtn_id"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:backgroundTint="#00FFFFFF"
             android:scaleType="fitCenter"
-            android:src="@drawable/length"
-            android:id="@+id/lengthBtn_id"/>
+            android:src="@drawable/length" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:orientation="horizontal"
-        >
+        android:padding="10dp"
+        android:gravity="center">
+
         <ImageButton
             android:id="@+id/tempBtn_id"
-            android:layout_width="209dp"
-            android:layout_height="209dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:backgroundTint="#00FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/thermometer" />
 
         <ImageButton
             android:id="@+id/massBtn_id"
-            android:layout_width="209dp"
-            android:layout_height="209dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:backgroundTint="#00FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/weighing_machine" />
     </LinearLayout>

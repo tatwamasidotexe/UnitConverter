@@ -19,20 +19,20 @@ public class MainActivity extends AppCompatActivity {
         tempBtn = findViewById(R.id.tempBtn_id);
         massBtn = findViewById(R.id.massBtn_id);
 
-        timeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(MainActivity.this, TimeCalculator.class);
-                startActivity(in);
-            }
-        });
-        lengthBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(MainActivity.this, LengthCalculator.class);
-                startActivity(in);
-            }
-        });
+//        timeBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent in = new Intent(MainActivity.this, TimeCalculator.class);
+//                startActivity(in);
+//            }
+//        });
+//        lengthBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent in = new Intent(MainActivity.this, LengthCalculator.class);
+//                startActivity(in);
+//            }
+//        });
         tempBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
-        massBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(MainActivity.this, MassCalculator.class);
-                startActivity(in);
-            }
-        });
+//        massBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent in = new Intent(MainActivity.this, MassCalculator.class);
+//                startActivity(in);
+//            }
+//        });
     }
 }
