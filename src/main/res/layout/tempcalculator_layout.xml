@@ -115,65 +115,15 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
-        <!--        <androidx.cardview.widget.CardView-->
-        <!--            android:id="@+id/fromUnit"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginLeft="24dp"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            android:layout_marginRight="24dp"-->
-        <!--            android:layout_marginBottom="12dp"-->
-        <!--            android:layout_weight="1"-->
-        <!--            app:cardCornerRadius="10dp"-->
-        <!--            app:cardElevation="10dp">-->
-
-        <!--            <RelativeLayout-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:background="@color/selectunit"-->
-        <!--                android:padding="4dp">-->
-
-        <!--                <RelativeLayout-->
-        <!--                    android:id="@+id/FromDropdown"-->
-        <!--                    android:layout_width="match_parent"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_centerInParent="true"-->
-        <!--                    android:padding="8dp">-->
-
-        <!--                    <TextView-->
-        <!--                        android:id="@+id/f_select"-->
-        <!--                        android:layout_width="wrap_content"-->
-        <!--                        android:layout_height="wrap_content"-->
-        <!--                        android:layout_marginRight="4dp"-->
-        <!--                        android:text="Select Unit"-->
-        <!--                        android:textColor="@color/white"-->
-        <!--                        android:textSize="20sp" />-->
-
-        <!--                    <ImageView-->
-        <!--                        android:layout_width="20dp"-->
-        <!--                        android:layout_height="20dp"-->
-        <!--                        android:layout_centerVertical="true"-->
-        <!--                        android:layout_marginLeft="4dp"-->
-        <!--                        android:layout_toRightOf="@id/f_select"-->
-        <!--                        android:src="@drawable/down_arrow"-->
-        <!--                        app:tint="@color/white" />-->
-
-        <!--                </RelativeLayout>-->
-
-        <!--            </RelativeLayout>-->
-
-        <!--        </androidx.cardview.widget.CardView>-->
-
         <Spinner
             android:id="@+id/FromDropdown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginRight="80dp"
-            
+            android:spinnerMode="dialog"
             android:background="@color/purple_700"
             android:padding="4dp"
-            android:prompt="Select"
 
             />
 
@@ -185,7 +135,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/purple_700"
             android:padding="4dp"
-            android:prompt="Select"
+
 
             />
 
