@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/timeBtn_id"
+            android:layout_width="209dp"
+            android:layout_height="209dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chronometer" />
+
+        <ImageButton
+            android:layout_width="209dp"
+            android:layout_height="209dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/length"
+            android:id="@+id/lengthBtn_id"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageButton
+            android:id="@+id/tempBtn_id"
+            android:layout_width="209dp"
+            android:layout_height="209dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/thermometer" />
+
+        <ImageButton
+            android:id="@+id/massBtn_id"
+            android:layout_width="209dp"
+            android:layout_height="209dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/weighing_machine" />
+    </LinearLayout>
+</LinearLayout>
