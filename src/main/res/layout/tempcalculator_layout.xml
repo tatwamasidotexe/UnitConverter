@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/temp_relativeLayout"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@color/background"
-    tools:context=".TempCalculator"
+    android:background="@drawable/background_image"
+    android:gravity="center"
+    android:orientation="vertical"
     >
 
     <LinearLayout
@@ -14,14 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/Heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="40dp"
             android:text="Temperature"
             android:textColor="@color/textColor"
             android:textSize="30dp" />
@@ -40,21 +39,20 @@
         android:id="@+id/editTextLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ll_heading"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal" >
+        android:layout_marginTop="0dp" >
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
 
             <EditText
                 android:id="@+id/from"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
                 android:background="@drawable/bg_rounded_input_field"
                 android:hint="From"
                 android:inputType="phone"
@@ -62,28 +60,38 @@
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/hintColor" />
 
-            <TextView
-                android:id="@+id/f_unit"
+<!--            <TextView-->
+<!--                android:id="@+id/f_unit"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Celcius"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/textColor"-->
+<!--                android:textSize="16sp" />-->
+            <Spinner
+                android:id="@+id/FromDropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Celcius"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textSize="16sp" />
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_rounded_input_field"
+                android:padding="2dp"
+                android:backgroundTint="@color/purple_200"
+                />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <EditText
                 android:id="@+id/to"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
                 android:background="@drawable/bg_rounded_input_field"
                 android:enabled="false"
                 android:hint="To"
@@ -93,112 +101,36 @@
                 android:textColorHint="@color/hintColor"
                 android:textCursorDrawable="@null" />
 
-            <TextView
-                android:id="@+id/t_unit"
+<!--            <TextView-->
+<!--                android:id="@+id/t_unit"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Fahrenheit"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/textColor"-->
+<!--                android:textSize="16sp" />-->
+            <Spinner
+                android:id="@+id/ToDropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fahrenheit"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textSize="16sp" />
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_rounded_input_field"
+                android:padding="2dp"
+                android:backgroundTint="@color/purple_200"
+
+                />
+
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextLinearLayout"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <Spinner
-            android:id="@+id/FromDropdown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="80dp"
-            android:spinnerMode="dialog"
-            android:background="@color/purple_700"
-            android:padding="4dp"
-
-            />
-
-        <Spinner
-            android:id="@+id/ToDropdown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/purple_700"
-            android:padding="4dp"
-
-
-            />
-
-        <!--        <androidx.cardview.widget.CardView-->
-        <!--            android:id="@+id/toUnit"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginLeft="24dp"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            android:layout_marginRight="24dp"-->
-        <!--            android:layout_marginBottom="12dp"-->
-        <!--            android:layout_weight="1"-->
-        <!--            app:cardCornerRadius="10dp"-->
-        <!--            app:cardElevation="10dp">-->
-
-        <!--            <RelativeLayout-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:background="@color/selectunit"-->
-        <!--                android:padding="4dp">-->
-
-        <!--                <RelativeLayout-->
-        <!--                    android:id="@+id/ToDropdown"-->
-        <!--                    android:layout_width="match_parent"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_centerInParent="true"-->
-        <!--                    android:padding="8dp">-->
-
-        <!--                    <TextView-->
-        <!--                        android:id="@+id/t_select"-->
-        <!--                        android:layout_width="wrap_content"-->
-        <!--                        android:layout_height="wrap_content"-->
-        <!--                        android:layout_marginRight="4dp"-->
-        <!--                        android:text="Select Unit"-->
-        <!--                        android:textColor="@color/white"-->
-        <!--                        android:textSize="20sp" />-->
-
-        <!--                    <ImageView-->
-        <!--                        android:layout_width="20dp"-->
-        <!--                        android:layout_height="20dp"-->
-        <!--                        android:layout_centerVertical="true"-->
-        <!--                        android:layout_marginLeft="4dp"-->
-        <!--                        android:layout_toRightOf="@id/t_select"-->
-        <!--                        android:src="@drawable/down_arrow"-->
-        <!--                        app:tint="@color/white" />-->
-
-        <!--                </RelativeLayout>-->
-
-        <!--            </RelativeLayout>-->
-
-        <!--        </androidx.cardview.widget.CardView>-->
-
-    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/convert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ll_list"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
 
@@ -218,8 +150,6 @@
                     android:id="@+id/btn_convert"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-
                     android:layout_marginRight="4dp"
                     android:text="Convert"
                     android:textColor="@color/white"
@@ -239,4 +169,4 @@
     </androidx.cardview.widget.CardView>
 
 
-</RelativeLayout>
+</LinearLayout>

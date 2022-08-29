@@ -15,7 +15,7 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
     Spinner to , from;
     EditText fval,tval;
     String tv_from,tv_to;
-    TextView flabel,tlabel;
+//    TextView flabel,tlabel;
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
@@ -29,8 +29,8 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
         to.setAdapter(ad);
         from.setAdapter(ad);
 
-        flabel = findViewById(R.id.f_unit);
-        tlabel = findViewById(R.id.t_unit);
+//        flabel = findViewById(R.id.f_unit);
+//        tlabel = findViewById(R.id.t_unit);
 
 
         to.setOnItemSelectedListener(this);
@@ -42,8 +42,8 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
     public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
         tv_from  = from.getSelectedItem().toString();
         tv_to = to.getSelectedItem().toString();
-        flabel.setText(tv_from);
-        tlabel.setText(tv_to);
+//        flabel.setText(tv_from);
+//        tlabel.setText(tv_to);
 
 
     }
