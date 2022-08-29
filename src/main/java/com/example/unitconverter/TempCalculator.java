@@ -20,6 +20,7 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
     EditText f_ed,t_ed;
     String tv_from,tv_to;
     //TextView flabel,tlabel;
+    TextView head;
     CardView calc;
     double fval,tval;
     @Override
@@ -34,6 +35,9 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
         from.setPrompt("Select");
         to.setAdapter(ad);
         from.setAdapter(ad);
+
+        head = findViewById(R.id.Heading);
+        head.setText("Temperature");
 
         //flabel = findViewById(R.id.f_unit);
         //tlabel = findViewById(R.id.t_unit);
