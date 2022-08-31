@@ -1,8 +1,5 @@
 package com.example.unitconverter;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -13,9 +10,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TempCalculator extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
-    String[] units = {"Celsius","Fahrenheit","Kelvin"};
+public class MassCalculator extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+
+    String[] units = {"Tonne","Kilogram","Gram","Milligram"};
     Spinner to , from;
     EditText f_ed,t_ed;
     String tv_from,tv_to;
@@ -23,6 +23,7 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
     TextView head;
     CardView calc;
     double fval,tval;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
@@ -37,10 +38,7 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
         from.setAdapter(ad);
 
         head = findViewById(R.id.Heading);
-        head.setText("Temperature");
-
-        //flabel = findViewById(R.id.f_unit);
-        //tlabel = findViewById(R.id.t_unit);
+        head.setText("Mass");
 
         f_ed = findViewById(R.id.FromVal);
         t_ed = findViewById(R.id.ToVal);
@@ -50,51 +48,75 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
 
         calc = findViewById(R.id.convert);
 
-//        Thread calculate = new Thread(){
-//
-//        }
-
-
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (TextUtils.isEmpty(f_ed.getText().toString())){
-                    Toast.makeText(TempCalculator.this,"Please Enter Value",Toast.LENGTH_SHORT).show();}//copy till here for all
+                    Toast.makeText(MassCalculator.this,"Please Enter Value",Toast.LENGTH_SHORT).show();}//copy till here for all
                 else{
                     fval = Double.parseDouble(f_ed.getText().toString());
                     if (tv_from.equals(tv_to)){
                         tval = fval;
-
                         t_ed.setText(String.valueOf(tval));
                     }
                     else if(tv_from.equals(units[0])&&tv_to.equals(units[1])){
-                        tval = UnitsConverter.Temp.CelToFar(fval);
+                        tval = UnitsConverter.Mass.TonToKg(fval);
                         tval = Math.round(tval * 100000d) / 100000d;
                         t_ed.setText(String.valueOf(tval));
                     }
                     else if(tv_from.equals(units[0])&&tv_to.equals(units[2])){
-                        tval = UnitsConverter.Temp.CelToKelvin(fval);
+                        tval = UnitsConverter.Mass.TonToGram(fval);
+                        tval = Math.round(tval * 100000d) / 100000d;
+                        t_ed.setText(String.valueOf(tval));
+                    }
+                    else if(tv_from.equals(units[0])&&tv_to.equals(units[3])){
+                        tval = UnitsConverter.Mass.TonToMg(fval);
                         tval = Math.round(tval * 100000d) / 100000d;
                         t_ed.setText(String.valueOf(tval));
                     }
                     else if(tv_from.equals(units[1])&&tv_to.equals(units[0])){
-                        tval = UnitsConverter.Temp.FarToCel(fval);
+                        tval = UnitsConverter.Mass.KgToTon(fval);
                         tval = Math.round(tval * 100000d) / 100000d;
                         t_ed.setText(String.valueOf(tval));
                     }
                     else if(tv_from.equals(units[1])&&tv_to.equals(units[2])){
-                        tval = UnitsConverter.Temp.FarToKelvin(fval);
+                        tval = UnitsConverter.Mass.KgToGram(fval);
+                        tval = Math.round(tval * 100000d) / 100000d;
+                        t_ed.setText(String.valueOf(tval));
+                    }
+                    else if(tv_from.equals(units[1])&&tv_to.equals(units[3])){
+                        tval = UnitsConverter.Mass.KgToMg(fval);
                         tval = Math.round(tval * 100000d) / 100000d;
                         t_ed.setText(String.valueOf(tval));
                     }
                     else if(tv_from.equals(units[2])&&tv_to.equals(units[0])){
-                        tval = UnitsConverter.Temp.KelvinToCel(fval);
+                        tval = UnitsConverter.Mass.GramToTon(fval);
                         tval = Math.round(tval * 100000d) / 100000d;
                         t_ed.setText(String.valueOf(tval));
                     }
                     else if(tv_from.equals(units[2])&&tv_to.equals(units[1])){
-                        tval = UnitsConverter.Temp.KelvinToFar(fval);
+                        tval = UnitsConverter.Mass.GramToKg(fval);
+                        tval = Math.round(tval * 100000d) / 100000d;
+                        t_ed.setText(String.valueOf(tval));
+                    }
+                    else if(tv_from.equals(units[2])&&tv_to.equals(units[3])){
+                        tval = UnitsConverter.Mass.GramToMg(fval);
+                        tval = Math.round(tval * 100000d) / 100000d;
+                        t_ed.setText(String.valueOf(tval));
+                    }
+                    else if(tv_from.equals(units[3])&&tv_to.equals(units[0])){
+                        tval = UnitsConverter.Mass.MgToTon(fval);
+                        tval = Math.round(tval * 100000d) / 100000d;
+                        t_ed.setText(String.valueOf(tval));
+                    }
+                    else if(tv_from.equals(units[3])&&tv_to.equals(units[1])){
+                        tval = UnitsConverter.Mass.MgToKg(fval);
+                        tval = Math.round(tval * 100000d) / 100000d;
+                        t_ed.setText(String.valueOf(tval));
+                    }
+                    else if(tv_from.equals(units[3])&&tv_to.equals(units[2])){
+                        tval = UnitsConverter.Mass.MgToGram(fval);
                         tval = Math.round(tval * 100000d) / 100000d;
                         t_ed.setText(String.valueOf(tval));
                     }
@@ -104,21 +126,18 @@ public class TempCalculator extends AppCompatActivity implements AdapterView.OnI
         });
     }
 
-
     @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
         tv_from  = from.getSelectedItem().toString();
         tv_to = to.getSelectedItem().toString();
         t_ed.setText("");
-
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {
+    public void onNothingSelected(AdapterView<?> adapterView) {
         tv_from  = from.getSelectedItem().toString();
         tv_to = to.getSelectedItem().toString();
+
     }
-
-
-
 }

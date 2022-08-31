@@ -32,26 +32,20 @@ class UnitsConverter{
     static class Time {
 
         // MICRO TO X CONVERSIONS
-        public static double MicroToMilli(double microsec) {
-            return microsec*0.001;
+        public static double MicroToMilli(double micros) {
+            return micros*0.001;
         }
-        public static double MicroToSec(double microsec) {
-            return microsec * 0.000001;
+        public static double MicroToSec(double micros) { return micros * 0.000001; }
+        public static double MicroToMin(double micros) { return micros/( 6 * Math.pow(10, 7)); }
+        public static double MicroToHours(double micros) {return micros/( 3.6 * Math.pow(10, 9));}
+        public static double MicroToDays(double micros) {
+            return micros/( 8.64 * Math.pow(10, 10));
         }
-        public static double MicroToMin(double microsec) {
-            return microsec * 1.6667 * Math.pow(10, -8);
+        public static double MicroToMonths(double micros) {
+            return micros/( 2.628 * Math.pow(10, 12));
         }
-        public static double MicroToHours(double microsec) {
-            return microsec * 2.7778 * Math.pow(10, -10);
-        }
-        public static double MicroToDays(double ms) {
-            return ms * 1.1574 * Math.pow(10, -11);
-        }
-        public static double MicroToMonths(double ms) {
-            return ms * 3.8052 * Math.pow(10, -13);
-        }
-        public static double MicroToYears(double ms) {
-            return ms * 3.171 * Math.pow(10, -14);
+        public static double MicroToYears(double micros) {
+            return micros/( 3.154 * Math.pow(10, 13));
         }
 
         // MILLI TO X CONVERSIONS
@@ -59,7 +53,7 @@ class UnitsConverter{
             return millis*1000;
         }
         public static double MilliToSeconds(double millis) {
-            return millis*0.001;
+            return millis/1000;
         }
         public static double MilliToMinutes(double millis) {
             return millis*1.667*Math.pow(10, -5);
@@ -85,7 +79,7 @@ class UnitsConverter{
             return s*Math.pow(10, 3);
         }
         public static double SecToMin(double s) {
-            return s*0.166667;
+            return s/60;
         }
         public static double SecToHour(double s) {
             return s*0.000277778;
@@ -215,6 +209,68 @@ class UnitsConverter{
             return s*12;
         }
 
+    }
+
+    static class Mass{
+        public static double TonToKg(double ton)
+        {
+            return (ton*1000);
+        }
+
+        public static double TonToGram(double ton)
+        {
+            return (ton*1000000);
+        }
+
+        public static double TonToMg(double ton)
+        {
+            return (ton*1000000000);
+        }
+
+        public static double KgToTon(double kg)
+        {
+            return (kg/1000);
+        }
+
+        public static double KgToGram(double kg)
+        {
+            return (kg*1000);
+        }
+
+        public static double KgToMg(double kg)
+        {
+            return (kg*1000000);
+        }
+
+        public static double GramToTon(double gram)
+        {
+            return (gram/1000000);
+        }
+
+        public static double GramToKg(double gram)
+        {
+            return (gram/1000);
+        }
+
+        public static double GramToMg(double gram)
+        {
+            return (gram*1000);
+        }
+
+        public static double MgToTon(double mg)
+        {
+            return (mg/1000000000);
+        }
+
+        public static double MgToKg(double mg)
+        {
+            return (mg/1000000);
+        }
+
+        public static double MgToGram(double mg)
+        {
+            return (mg/1000);
+        }
     }
 
 

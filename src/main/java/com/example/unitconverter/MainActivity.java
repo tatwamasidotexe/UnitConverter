@@ -41,12 +41,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
-//        massBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent in = new Intent(MainActivity.this, MassCalculator.class);
-//                startActivity(in);
-//            }
-//        });
+        massBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(MainActivity.this, MassCalculator.class);
+                startActivity(in);
+            }
+        });
     }
 }

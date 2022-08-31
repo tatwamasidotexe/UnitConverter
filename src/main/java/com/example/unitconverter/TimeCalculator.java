@@ -63,13 +63,13 @@ public class TimeCalculator extends AppCompatActivity implements AdapterView.OnI
 
                         toTextField.setText(String.valueOf(toDisplay));
                     }
-//                    microseconds to milliseconds
+                    // microseconds to milliseconds
                     else if(fromDD_text.equals(units[0]) && toDD_text.equals(units[1])){
                         toDisplay = UnitsConverter.Time.MicroToMilli(fromInput);
                         toDisplay = Math.round(toDisplay * 100000d) / 100000d;
                         toTextField.setText(String.valueOf(toDisplay));
                     }
-//                    microsecs to seconds
+                    // microsecs to seconds
                     else if(fromDD_text.equals(units[0]) && toDD_text.equals(units[2])){
                         toDisplay = UnitsConverter.Time.MicroToSec(fromInput);
                         toDisplay = Math.round(toDisplay * 10000000d) / 10000000d;
@@ -90,19 +90,19 @@ public class TimeCalculator extends AppCompatActivity implements AdapterView.OnI
                     // micro s to days
                     else if(fromDD_text.equals(units[0])&&toDD_text.equals(units[5])){
                         toDisplay = UnitsConverter.Time.MicroToDays(fromInput);
-                        toDisplay = Math.round(toDisplay * 1000000000d) / 1000000000d;
+                        toDisplay = Math.round(toDisplay * 1000000000000d) / 1000000000000d;
                         toTextField.setText(String.valueOf(toDisplay));
                     }
                     // micro s to months
                     else if(fromDD_text.equals(units[0])&&toDD_text.equals(units[6])){
                         toDisplay = UnitsConverter.Time.MicroToMonths(fromInput);
-                        toDisplay = Math.round(toDisplay * 1000000000d) / 1000000000d;
+                        toDisplay = Math.round(toDisplay * 1000000000000d) / 1000000000000d;
                         toTextField.setText(String.valueOf(toDisplay));
                     }
                     // micro s to years
                     else if(fromDD_text.equals(units[0])&&toDD_text.equals(units[7])){
                         toDisplay = UnitsConverter.Time.MicroToYears(fromInput);
-                        toDisplay = Math.round(toDisplay * 1000000000d) / 1000000000d;
+                        toDisplay = Math.round(toDisplay * 1000000000000d) / 1000000000000d;
                         toTextField.setText(String.valueOf(toDisplay));
                     }
                     // milli to micro
@@ -143,7 +143,7 @@ public class TimeCalculator extends AppCompatActivity implements AdapterView.OnI
                     }
                     // milli to years
                     else if(fromDD_text.equals(units[1])&&toDD_text.equals(units[7])){
-                        toDisplay = UnitsConverter.Time.MicroToYears(fromInput);
+                        toDisplay = UnitsConverter.Time.MilliToYears(fromInput);
                         toDisplay = Math.round(toDisplay * 100000d) / 100000d;
                         toTextField.setText(String.valueOf(toDisplay));
                     }
