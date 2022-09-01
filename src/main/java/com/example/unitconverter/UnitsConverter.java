@@ -397,19 +397,19 @@ class UnitsConverter{
         }
         public static double MileToMilli(double Mile)
         {
-            return (Mile*1.609);
+            return (Mile*1.609*1000000);
         }
         public static double MileToCenti(double Mile)
         {
-            return (Mile/0.000621371);
+            return (Mile*6.21371e-6);
         }
         public static double MileToKMeter(double Mile)
         {
-            return (Mile/0.000621371);
+            return (Mile*0.621371);
         }
         public static double MileToinch(double Mile)
         {
-            return (Mile/0.000621371);
+            return (Mile*1.57828e-5);
         }
 
 
