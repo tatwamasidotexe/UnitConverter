@@ -273,5 +273,149 @@ class UnitsConverter{
         }
     }
 
+    public static class Length{
+
+        public static double MilliToMeter(double milli)
+        {
+            return (milli/1000);
+        }
+        public static double MilliToCMeter(double milli)
+        {
+            return (milli/10);
+        }
+        public static double MilliToKMeter(double milli)
+        {
+            return (milli/1000000);
+        }
+        public static double MilliToinch(double milli)
+        {
+            return (milli/25.4);
+        }
+        public static double MilliTomile(double milli)
+        {
+            return (milli/(1.609)*1000000);
+        }
+
+        public static double MeterToMilli(double meter)
+        {
+            return (meter*1000);
+        }
+        public static double MeterToCenti(double meter)
+        {
+            return (meter*100);
+        }
+        public static double MeterToInch(double meter)
+        {
+            return (meter*39.3701);
+        }
+        public static double MeterToMile(double meter)
+        {
+            return (meter*0.000621371);
+        }
+        public static double MeterToKMeter(double meter)
+        {
+            return (meter/1000);
+        }
+
+        public static double CentiToMeter(double Centi)
+        {
+            return (Centi/100);
+        }
+        public static double CentiToMilli(double Centi)
+        {
+            return (Centi*10);
+        }
+        public static double CentiToKMeter(double Centi)
+        {
+            return (Centi/100000);
+        }
+        public static double CentiToinch(double Centi)
+        {
+            return (Centi*0.393701);
+        }
+        public static double CentiToMile(double Centi)
+        {
+            return ((Centi*6.21371)/1000000);
+        }
+
+
+
+        public static double KiloToMeter(double Kilo)
+        {
+            return (Kilo*1000);
+
+        }
+        public static double KiloToCenti(double Kilo)
+        {
+            return (Kilo*100000);
+
+        }
+        public static double KiloToinch(double Kilo)
+        {
+            return (Kilo*39370.1);
+
+        }
+        public static double KiloToMile(double Kilo)
+        {
+            return (Kilo*0.621371);
+
+        }
+        public static double KiloToMilli(double Kilo)
+        {
+            return (Kilo*1000000);
+
+        }
+
+
+
+        public static double InchToMeter(double Inch)
+        {
+            return (Inch/39.3701);
+        }
+        public static double InchToMilli(double Inch)
+        {
+            return (Inch*25.4);
+        }
+        public static double InchToCenti(double Inch)
+        {
+            return (Inch*2.54);
+        }
+        public static double InchToKilo(double Inch)
+        {
+            return ((Inch*2.54)/100000);
+        }
+        public static double InchToMile(double Inch)
+        {
+            return ((Inch*1.57828)/100000);
+        }
+
+
+
+        public static double MileToMeter(double Mile)
+        {
+            return (Mile/0.000621371);
+        }
+        public static double MileToMilli(double Mile)
+        {
+            return (Mile*1.609);
+        }
+        public static double MileToCenti(double Mile)
+        {
+            return (Mile/0.000621371);
+        }
+        public static double MileToKMeter(double Mile)
+        {
+            return (Mile/0.000621371);
+        }
+        public static double MileToinch(double Mile)
+        {
+            return (Mile/0.000621371);
+        }
+
+
+
+
+    }
+
 
 }
