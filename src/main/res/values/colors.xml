@@ -10,6 +10,5 @@
     <color name="background">#250C52</color>
     <color name="textColor">#EDF8FA</color>
     <color name="hintColor">#E7A7A3</color>
-    <color name="selectunit">#ABB832</color>
-    <color name="convertUnit">#4CAF50</color>
+    <color name="convertUnit">#02abe8</color>
 </resources>

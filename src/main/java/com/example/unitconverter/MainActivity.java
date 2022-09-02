@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
-//        lengthBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent in = new Intent(MainActivity.this, LengthCalculator.class);
-//                startActivity(in);
-//            }
-//        });
+        lengthBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(MainActivity.this, LengthCalculator.class);
+                startActivity(in);
+            }
+        });
         tempBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
